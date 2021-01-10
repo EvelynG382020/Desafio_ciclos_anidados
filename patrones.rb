@@ -25,108 +25,124 @@ print "\n"
 
 #____________________
 # LETRA I
-#parte superior
+#Parte superior
 n = ARGV[0].to_i
 n.times do |i|
-    print "*"
+    print '*'
 end
 print "\n"
 
-#partes del medio I
+#Parte intermedia
+n = ARGV[0].to_i
 (n-2).times do |i|
-    print " "  
-    (n-4).times do |i|
-        print " "
+    (n/2).times do |i|
+        print ' '
     end
-    print "*"
-    print "\n"    
+        print '*'
+        print "\n"
 end
 
-#partes inferior I
+#Parte inferior
 n.times do |i|
-    print "*"
+    print '*'
 end
-print "\n"      
 print "\n"
 
 #___________________
 #LETRA Z 
-#parte superior LETRA Z
+#Parte superior
 n = ARGV[0].to_i
 n.times do |i|
-    print "*"
+    print '*'
 end
 print "\n"
 
-#parte del medio LETRA Z
-(n-4).times do |i|
-    print "   * "
+#Parte intermedia
+(n-2).times do |i|
+    (n-i-2).times do |i|
+        print ' '
     end
-    print "\n"  
-    (n-4).times do |i|
-        print "  *  "
-    end
-    print "\n"
-        (n-4).times do |i|
-        print " *   "
-        end
-    print "\n"
+        print '*'
+        print "\n"
+end
 
-#parte inferior LETRA Z
-    n.times do |i|
-        print "*"
-    end
-    print "\n"
-    print "\n"
+#Parte inferior
+n.times do |i|
+    print '*'
+end
+print "\n"
+
 #________________________
 #LETRA X 
 n = ARGV[0].to_i
-(n-3).times do |i|
-    print "*   "
-    end   
-    print "\n"
-    (n-3).times do |i|
-        print " *"
+i = 1
+
+#parte superior
+(n/2).times do |i|
+    i.times do |i|
+        print ' '
     end
-    print "\n"
-    (n-4).times do |i|
-        print "  *"    
+print '*'
+if n.odd?
+    ((n-(2*i))-2).times do |i|
+        print ' '
     end
-    print "\n"
-    (n-3).times do |i|
-        print " *"
-    end   
-    print "\n"
-        (n-3).times do |i|
-        print "*   "       
+else
+    ((n-(2*i))-1).times do |i|
+        print ' '
+        end
     end
-    print "\n"
-    print "\n"
+print '*'
+print "\n"
+end
+
+#parte intermedia
+(n/2).times do |i|
+    print ' ' 
+end
+print '*'
+print "\n"
+
+#parte inferior
+(n/2).times do |i|
+    ((n/2)-(i+1)).times do |i|
+        print ' '
+    end
+print '*'
+    (i+(i+1)).times do |i|
+        print ' '
+    end
+print '*'
+print "\n"
+end
 
 #_______________________
 #LETRA O           
-#parte superior LETRA O
+#Parte superior
 n = ARGV[0].to_i
 n.times do |i|
-    print "*"
+    print '*'
 end
 print "\n"
 
-#parte del medio LETRA O
+#Parte intermedia
 (n-2).times do |i|
-    print "*"  
-        (n-2).times do |i|
-            print " "
+    print '*'
+    i.times do |i|
+        print ' '
     end
-    print "*"
-    print "\n"    
+    print '*'
+    (n-(i+3)).times do |i|
+        print ' '
+        end
+    print '*'
+    print "\n"
 end
 
-#parte inferior LETRA O
+#Parte inferior
 n.times do |i|
-    print "*"
+    print '*'
 end
-print "\n"      
 print "\n"
 
 #_____________________
